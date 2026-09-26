@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="One-Forcing project page: stable one-step autoregressive video generation with adversarial distribution matching." name="description"/>
+<meta content="One-Forcing" property="og:title"/>
+<meta content="Stable one-step autoregressive video generation with adversarial distribution matching." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="assets/images/teaser.png" property="og:image"/>
+<title>One-Forcing | Stable One-Step Autoregressive Video Generation</title>
+<link href="assets/css/styles.css?v=20260525-2" rel="stylesheet"/>
+<meta content="noindex, nofollow" name="robots"/><meta content="no-referrer" name="referrer"/></head>
+<body>
+<nav aria-label="Primary navigation" class="topbar">
+<a class="brand" href="#top">One-Forcing</a>
+<div class="nav-links">
+<a href="#comparison">Comparison</a>
+<a href="#method">Method</a>
+<a href="#gallery">Gallery</a>
+
+</div>
+</nav>
+<header class="hero" id="top">
+<div aria-hidden="true" class="hero-media">
+<video autoplay="" loop="" muted="" playsinline="" src="assets/videos/comparison/055_one_forcing.mp4"></video>
+<video autoplay="" loop="" muted="" playsinline="" src="assets/videos/comparison/087_one_forcing.mp4"></video>
+<video autoplay="" loop="" muted="" playsinline="" src="assets/videos/comparison/008_one_forcing.mp4"></video>
+<video autoplay="" loop="" muted="" playsinline="" src="assets/videos/comparison/077_one_forcing.mp4"></video>
+</div>
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<h1>One-Forcing</h1>
+<h2 class="subtitle">Stable One-Step Autoregressive Video Generation</h2>
+
+
+
+<p class="anonymous-notice">Anonymous submission</p></div>
+</header>
+<main>
+<section class="section tldr-section" id="abstract">
+<h2>TL;DR</h2>
+<div class="tldr-card">
+<p>One-Forcing enables stable <strong>1-step autoregressive video generation</strong> by augmenting DMD-based causal distillation with a shared noised-latent adversarial critic, achieving <strong>state-of-the-art</strong> 1-step VBench performance and efficient framewise generation.</p>
+</div>
+</section>
+<section class="section" id="comparison">
+<div class="section-heading">
+<h2>One-Forcing against one-step causal baselines</h2>
+</div>
+<div class="comparison-stack" id="comparison-root"></div>
+</section>
+<section class="section split-section" id="method">
+<div class="section-copy">
+<p class="eyebrow">Method</p>
+<h2>Adversarial distribution matching for causal generation</h2>
+<p>One-Forcing keeps the causal autoregressive generator and DMD objective, then turns the trainable fake-score network into a joint score critic and noised-latent discriminator. Real ODE latents and generated latents are noised at sampled timesteps and passed through the same transformer backbone, so adversarial feedback targets the same distribution used by the DMD gradient.</p>
+</div>
+<figure class="paper-figure">
+<img alt="One-Forcing method overview with score-matching and adversarial noised-latent branches." src="assets/images/one_forcing_mechanism_v3.png?v=20260521-1"/>
+</figure>
+</section>
+<section class="section" id="gallery">
+<div class="section-heading">
+<p class="eyebrow">Gallery</p>
+<h2>Additional One-Forcing samples</h2>
+</div>
+<div class="video-grid" id="gallery-root"></div>
+<div class="load-row">
+<button class="load-button" id="load-more" type="button">Load all videos</button>
+</div>
+</section>
+
+</main>
+<footer class="footer">
+<p>Anonymous supplementary project page.</p>
+</footer>
+<script src="assets/js/data.js?v=20260519-1"></script>
+<script src="assets/js/main.js?v=20260525-1"></script>
+</body>
+</html>
+
